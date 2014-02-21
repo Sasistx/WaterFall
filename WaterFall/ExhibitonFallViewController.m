@@ -7,7 +7,9 @@
 //
 
 #import "ExhibitonFallViewController.h"
+
 #define CELL_WIDTH 142.0f
+
 @interface ExhibitonFallViewController ()
 {
     NSMutableArray* _imageArray;
