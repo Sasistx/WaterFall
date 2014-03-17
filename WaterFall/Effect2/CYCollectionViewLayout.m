@@ -86,13 +86,13 @@
         NSUInteger columnIndex = [self shortestColumnIndex];
         CGFloat xOffset = _sectionInset.left + (_itemWidth + _interitemSpacing) * columnIndex;
         CGFloat yOffset = [(_columnHeights[columnIndex]) floatValue];
-        
         UICollectionViewLayoutAttributes *attributes =
         [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-        attributes.frame = CGRectMake(xOffset, yOffset, self.itemWidth, itemHeight);
+        attributes.frame = CGRectMake(xOffset, yOffset, _itemWidth, itemHeight);
         [_itemAttributes addObject:attributes];
         _columnHeights[columnIndex] = @(yOffset + itemHeight + _interitemSpacing);
     }
+    NSLog(@"attr:%d", [_itemAttributes count]);
 }
 
 - (CGSize)collectionViewContentSize

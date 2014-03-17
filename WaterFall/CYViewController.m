@@ -67,10 +67,10 @@
 
 - (void)updateLayout
 {
-    CYCollectionViewLayout *layout =
-    (CYCollectionViewLayout *)self.collectionView.collectionViewLayout;
-    layout.columnCount = self.collectionView.bounds.size.width / self.cellWidth;
-    layout.itemWidth = self.cellWidth;
+//    CYCollectionViewLayout *layout =
+//    (CYCollectionViewLayout *)self.collectionView.collectionViewLayout;
+//    layout.columnCount = self.collectionView.bounds.size.width / self.cellWidth;
+//    layout.itemWidth = self.cellWidth;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -114,7 +114,7 @@
     
     UIImage* image = _imageArray[indexPath.item];
     CGFloat imageWidth = image.size.width;
-    NSInteger imageHeight = (140 / imageWidth) * image.size.height;
+    NSInteger imageHeight = (CELL_WIDTH / imageWidth) * image.size.height;
     return imageHeight;
 }
 
